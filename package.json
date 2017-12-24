@@ -1,42 +1,41 @@
 {
-    "name": "vue2ghp",
-    "version": "0.0.1",
-    "description": "An NPM package for building and deploying VueJS sites to GitHub Pages.",
-    "main": "dist/index.js",
-    "scripts": {
-      "build": "babel ./src -d ./dist",
-      "test": "nyc mocha --require babel-core/register",
-      "prepublish": "npm run build"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/kschluter/vue2ghp.git"
-    },
-    "keywords": [
-      "npm",
-      "node",
-      "vue",
-      "vuejs",
-      "github pages",
-      "deploy"
-    ],
-    "author": "Kory Schluter",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/kschluter/vue2ghp/issues"
-    },
-    "homepage": "https://github.com/kschluter/vue2ghp#readme",
-    "devDependencies": {
-      "babel-cli": "^6.26.0",
-      "babel-preset-env": "^1.6.1",
-      "mocha": "^4.0.1",
-      "nyc": "^11.4.1"
-    },
-    "nyc": {
-      "reporter": [
-        "lcov",
-        "text"
-      ]
-    }
+  "name": "vue2ghp",
+  "version": "0.0.1",
+  "description": "An NPM package for building and deploying VueJS sites to GitHub Pages.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel ./src -d ./dist",
+    "test": "nyc mocha --require babel-core/register",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kschluter/vue2ghp.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "vue",
+    "vuejs",
+    "github pages",
+    "deploy"
+  ],
+  "author": "Kory Schluter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kschluter/vue2ghp/issues"
+  },
+  "homepage": "https://github.com/kschluter/vue2ghp#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "mocha": "^4.0.1",
+    "nyc": "^11.4.1"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
   }
-  
+}
