@@ -9,6 +9,7 @@ export function deploy(args) {
     const rejectMessage = `Build push to github failed`;
     const repository = packageJson["homepage"] || null;
 
+    console.log('Deploying to GitHub...');
     ghpages.publish(
       "docs",
       {

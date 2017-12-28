@@ -12,6 +12,7 @@ export function build(args) {
     const isYarn = fs.existsSync(path.resolve("./" || process.cwd(), "yarn.lock"));
     const packageManagerName = isYarn ? "yarn" : "npm";
 
+    console.log('Starting build...');
     exec(`${packageManagerName} run build`, function() {
       console.log(resolveMessage);
       args.messages.push(resolveMessage)

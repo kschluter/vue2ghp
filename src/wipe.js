@@ -1,5 +1,5 @@
 import * as fs from "fs"; // https://nodejs.org/dist/latest-v9.x/docs/api/fs.html
-import * as rimraf from "rimraf";
+var rimraf = require("rimraf");
 import { config } from './config';
 
 export function wipe(args) {

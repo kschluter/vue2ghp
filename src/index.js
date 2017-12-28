@@ -5,8 +5,6 @@ import { copy } from "./copy";
 import { replace } from "./replace";
 import { deploy } from "./deploy";
 
-
-
 // Main
 function send2GHP() {
   let result = {
@@ -50,6 +48,6 @@ send2GHP().then(data => {
     console.log('Additional error info: ');
     console.log(data.errors);
   } else {
-    console.log(`{$config.codes.checkmark} Deployment complete!`)
+    console.log(`${config.codes.checkmark} Deployment complete!`)
   }
 });
