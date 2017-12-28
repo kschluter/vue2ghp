@@ -1,8 +1,10 @@
+var colors = require('colors');
+
 export const config = {
   // https://unicode-table.com/en/
   codes: {
-    checkmark: '\u2714',  //✔
-    smiley: '\u263A', // ☺
-    frownie: '\u2639' // ☹
+    success: colors.green(`✔`),
+    error: colors.red('☹'),
+    info: colors.yellow('🛈')
   }
 };

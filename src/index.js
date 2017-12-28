@@ -1,9 +1,9 @@
 import { config } from './config';
-import { wipe } from "./wipe";
-import { build } from "./build";
-import { copy } from "./copy";
-import { replace } from "./replace";
-import { deploy } from "./deploy";
+import { wipe } from './wipe';
+import { build } from './build';
+import { copy } from './copy';
+import { replace } from './replace';
+import { deploy } from './deploy';
 
 // Main
 function send2GHP() {
@@ -26,7 +26,7 @@ function send2GHP() {
         return data;
       })
       /*
-      .then(replace) // replace relative paths
+      .then(replace) // update index.html paths and copy to dist folder
       .then(data => {
         return data;
       })
@@ -45,9 +45,9 @@ function send2GHP() {
 // Run main
 send2GHP().then(data => {
   if (data.errors.length > 0){
-    console.log('Additional error info: ');
+    console.log(`${config.codes.error } An error has occurred:`);
     console.log(data.errors);
   } else {
-    console.log(`${config.codes.checkmark} Deployment complete!`)
+    console.log(`${config.codes.success} Done!`)
   }
 });

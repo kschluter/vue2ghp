@@ -1,15 +1,17 @@
-import * as ghpages from "gh-pages"; // https://www.npmjs.com/package/gh-pages
+import * as ghpages from 'gh-pages'; // https://www.npmjs.com/package/gh-pages
 import { config } from './config';
-const packageJson = require("../../../package.json");
+const packageJson = require('../../../package.json');
 
 export function deploy(args) {
   return new Promise((resolve,reject) => {
 
-    const resolveMessage = `${config.codes.checkmark} Build pushed to github pages`;
-    const rejectMessage = `Build push to github failed`;
     const repository = packageJson["homepage"] || null;
 
-    console.log('Deploying to GitHub...');
+    const resolveMessage = `${config.codes.success} Deployment to GitHub complete`;
+    const rejectMessage = `Deployment to github failed`;
+    const beginDeployMessage =`${config.codes.info} Starting deployment to GitHub...`;
+
+    console.log(beginDeployMessage);
     ghpages.publish(
       "docs",
       {
@@ -19,9 +21,10 @@ export function deploy(args) {
       },
       function(err) {
         if (err) {
-          args.errors.push(rejectMessage);
+          args.errors.push(err);
           reject(args)
         } else {
+          console.log(resolveMessage);
           args.messages.push(resolveMessage);
           resolve(args)
         }
