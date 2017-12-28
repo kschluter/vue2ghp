@@ -25,12 +25,10 @@ function send2GHP() {
       .then(data => {
         return data;
       })
-      /*
-      .then(replace) // update index.html paths and copy to dist folder
+      .then(replace) // parse/replace paths in index.html and copy to dist folder
       .then(data => {
         return data;
       })
-      */
       .then(deploy) // deploy to github pages
       .then(data => {
         return data;
