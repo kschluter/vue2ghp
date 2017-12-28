@@ -1,2 +1,2 @@
 # vue2ghp
-An NPM package for building and deploying VueJS sites to GitHub Pages
+An NPM package for deploying VueJS CLI generated apps to GitHub Pages
