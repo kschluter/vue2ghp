@@ -15,7 +15,7 @@ export function replace(args) {
         reject(args);
       } else {
         // replace paths in index file that contain "/dist/" with ""
-        data = data.replace(/\/dist\//g, "");
+        data = data.replace(/\/dist\//g, ".\/");
         // write file to docs folder
         fs.writeFile("docs/index.html", data, "utf-8", function(err) {
           if(err){
