@@ -1,6 +1,6 @@
 {
   "name": "vue2ghp",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An NPM package for deploying VueJS CLI generated apps to GitHub Pages",
   "main": "dist/index.js",
   "scripts": {
