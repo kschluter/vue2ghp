@@ -30,4 +30,4 @@ Run deploy command in terminal:
 npm run deploy
 ```
 
-Your site will now be located in your repo under the docs subfolder. You will then need to go into you repo settings and under the GitHub pages section switch the drop down to "Master branch/docs folder" and click save.
+Your site will now be located in your repo under the docs subfolder. You will then need to go into your repo settings under the GitHub pages section and switch the drop down to "Master branch/docs folder" then click save.
